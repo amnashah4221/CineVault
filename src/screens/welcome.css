@@ -1,0 +1,222 @@
+body{
+    background-color: var(--primary-color);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+section{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.sec1-welcome{
+    background-color: var(--secondary-color);
+    color: var(--text1-color);
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    gap: 15px;
+}
+
+.sec1-welcome .fifilm{
+    font-size: 80px;
+    color: var(--btn2-text);
+}
+
+.sec1-welcome .sec1-heading{
+    font-size: 48px;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+.sec1-heading span:first-child{
+    color: var(--btn2-text);
+}
+
+.sec1-welcome h2{
+    color: var(--text2-color);
+    font-weight: 400;
+    font-family: var( --heading-font);  
+    font-size: 20px;
+    padding-left: 25%;
+    padding-right: 25%;
+    text-align: center;
+}
+
+
+.sec1-btn {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.sec1-btn button{
+    padding: 10px 20px;
+    font-size: 15px;
+    font-family: var(--primary-font);
+    letter-spacing: 0.5px;
+    font-weight: 550;
+    border: 1.5px solid;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.sec1-btn .btn-1{
+    color: var(--btn2-text);
+    background-color: var(--btn1-text);
+    border-color: var(--btn1-text);
+}
+
+.btn-1:hover{
+   transform: scale(1.03);
+   background-color: #7c0707;
+}
+
+.sec1-btn .btn-2{
+    color: var(--text1-color);
+    background-color: var(--secondary-color);
+    border-color: var(--text1-color);
+}
+
+.btn-2:hover{
+   background-color: var(--btn2-text);
+   color: var(--btn1-text);
+   border-color: var(--text2-color);
+}
+
+.sec2-welcome {
+  color: var(--text1-color);
+  display: flex;
+  border-bottom: 1.5px solid var(--text1-color);
+}
+
+.sec2-welcome .cards-welcome{
+    display: flex;
+    gap: 3%;
+    margin: 5% 7%;
+}
+
+.cards-welcome .card-welcome{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 1.5px solid var(--text2-color);
+    padding: 2% 3%;
+    border-radius: 10px;
+    background-color: var(--cardbg);
+}
+
+.card-welcome .card-icon{
+    font-size: 40px;
+    color: var(--btn2-text);
+}
+
+.card-welcome h2{
+    font-family: var(--heading-font);
+    font-size: 20px;
+}
+
+.card-welcome p{
+    font-family: var(--primary-font);
+    letter-spacing: 0.7px;
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--text2-color);
+}
+
+.sec3-welcome{
+    background-color: var(--cardbg);
+    display: flex;
+}
+
+.sec3-bottom{
+    text-align: center;
+    justify-content: center;
+    color: var(--text1-color);
+}
+
+.sec3-welcome h2{
+    font-family: var(--heading-font);
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.sec3-welcome p{
+    font-family: var(--primary-font);
+    color: var(--text2-color);
+    letter-spacing: 0.7px;
+    font-size: 14px;
+}
+
+.sec3-welcome .start-btn{
+    margin-top: 15px;
+    margin-bottom: 50px;
+  padding: 12px 25px;
+  background-color: var(--btn2-text);
+  border: none;
+  font-size: 15px;
+  border-radius: 8px;
+  color: var(--btn1-text);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.start-btn:hover{
+    background-color:  #ceb211;
+    transform: scale(1.03);
+}
+
+@media (max-width: 575px) {
+    
+.sec1-welcome .fifilm{
+    font-size: 70px;
+}
+
+.sec1-welcome .sec1-heading{
+    font-size: 40px;
+    font-weight: 550;
+    letter-spacing: 0.8px;
+}
+
+
+.sec1-welcome h2{
+    font-family: var( --heading-font);  
+    font-size: 16px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.sec1-btn {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-welcome .card-icon{
+    font-size: 40px;
+}
+
+.card-welcome h2{
+    font-size: 18px;
+}
+
+
+.sec2-welcome .cards-welcome{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.sec3-welcome .start-btn{
+  font-size: 13px;
+}
+
+}

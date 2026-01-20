@@ -1,0 +1,42 @@
+:root {
+    --primary-color: #121212;
+    --secondary-color: #272110;
+    --cardbg:  #1c1c1cac;
+    --btn1-text: #8a0000;
+    --btn2-text: #ffd900;
+    --text1-color: #b3b3b3;
+    --text2-color: #b3b3b3ac;
+    --heading-font: 'Bebas Neue', sans-serif;
+    --primary-font: 'Montserrat', sans-serif;
+}
+
+.dark-theme{
+ --primary-color: #121212;
+    --secondary-color: #272110;
+    --cardbg:  #1c1c1cac;
+    --btn1-text: #8a0000;
+    --btn2-text: #ffd900;
+    --text1-color: #b3b3b3;
+    --text2-color: #b3b3b3ac;
+    --heading-font: 'Bebas Neue', sans-serif;
+    --primary-font: 'Montserrat', sans-serif;   
+}
+
+.light-theme{
+    --text2-color: #121212;
+    --text1-color: #272110;
+    --cardbg: #e4e0e0ac;
+    --btn1-text: #8a0000;
+    --btn2-text: #ffd900;
+    --primary-color: white;
+    --secondary-color:  #f0eeeeac;
+    --heading-font: 'Bebas Neue', sans-serif;
+    --primary-font: 'Montserrat', sans-serif;   
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}

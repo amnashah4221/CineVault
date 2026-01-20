@@ -1,0 +1,150 @@
+/* --- Desktop & Base Styles (Inko maine waisa hi rakha hai) --- */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    height: 70px; /* Ek fix height zaroori hai absolute positioning ke liye */
+    align-items: center;
+    background-color: var(--primary-color);
+    border-bottom: 1.5px solid var(--text1-color);
+    color: aliceblue;
+    justify-content: space-between;
+    padding-left: 6%;
+    padding-right: 6%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    display: flex;
+    flex-direction: row;
+    color: var(--btn2-text);
+    font-family: var(--heading-font);
+    cursor: pointer;
+}
+
+.navbar .navlogo {
+    display: flex;
+    gap: 10px;
+    font-size: 24px;
+}
+
+.navbar .links {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.navbar .links .links-btn {
+    color: var(--text1-color);
+    background-color: var(--primary-color);
+    font-weight: 500;
+    font-family: var(--primary-font);
+    font-size: 15px;
+    padding: 10px 10px;
+    border: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.links {
+    cursor: pointer;
+}
+
+.links .links-btn:hover {
+    background-color: #3b3b3b;
+    border-radius: 10px;
+}
+
+.light-theme .links .links-btn:hover {
+    background-color: var(--btn1-text);
+    color: var(--primary-color);
+}
+
+.links .links-btn.active {
+    box-sizing: border-box;
+    background-color: var(--btn1-text);
+    color: var(--btn2-text);
+    border-radius: 10px;
+}
+
+.light-theme .links-btn.active {
+    background-color: var(--btn2-text);
+    color: var(--btn1-text);
+}
+
+.navbar .options {
+    display: flex;
+    gap: 40px;
+}
+
+.options button {
+    color: var(--text1-color);
+    background-color: var(--primary-color);
+    font-weight: 500;
+    font-family: var(--primary-font);
+    font-size: 15px;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.options button:hover {
+    color: var(--btn1-text);
+    background-color: var(--btn2-text);
+    border-radius: 6px;
+}
+
+/* 1. Hamburger Default State */
+.hamburger-icon {
+    display: none; /* Desktop par hide */
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--text1-color);
+}
+
+/* --- 2. Responsive Settings (The Fix) --- */
+@media (max-width: 768px) {
+    .hamburger-icon {
+        display: block; /* Mobile par show */
+        order: 3;
+    }
+
+    .navbar .options {
+        order: 2;
+        margin-left: auto;
+        margin-right: 20px;
+        gap: 15px;
+    }
+
+    /* Links container positioning */
+    .navbar .links {
+        display: none; /* Hide by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Navbar height ke niche */
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        padding: 10px 0;
+        gap: 0;
+        z-index: 9999; /* Isse content ke upar aayega */
+        border-bottom: 2px solid var(--text1-color);
+    }
+
+    /* Jab State 'open' ho */
+    .navbar .links.open {
+        display: flex !important;
+    }
+
+    /* Mobile Links Styling (Hover/Active effects maintain rahenge) */
+    .navbar .links .links-btn {
+        width: 100%;
+        padding: 15px 30px;
+        border-radius: 0; /* Mobile menu mein square buttons ache lagte hain */
+        justify-content: flex-start;
+    }
+}
